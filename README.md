@@ -1,18 +1,31 @@
+# Vehicle Counter
 
-## Vehicle Counter 🚗🚌🚛
+A real-time **vehicle counting system** using **YOLOv8** for object detection and **OpenCV + CVZone** for tracking and counting vehicles across two lanes.
 
-A computer vision project that detects and counts vehicles in video footage using YOLO (You Only Look Once), OpenCV, and CVZone. This system can be applied in traffic monitoring, congestion analysis, and smart city solutions.
-## 📌 Features
+---
 
-- Real-time vehicle detection and counting.
+## 🚗 Project Overview
 
-- Supports multiple vehicle types (cars, buses, trucks, bikes, etc.).
+This project detects and counts vehicles moving in **two separate lanes** (incoming and outgoing) from a video stream. It leverages:
 
-- Tracks vehicles across frames to prevent duplicate counts.
+- **YOLOv8**: State-of-the-art object detection for vehicles.
+- **OpenCV**: For video processing and image manipulation.
+- **CVZone**: For easy visualization, including drawing bounding boxes and text on frames.
+- **SORT Tracker**: To maintain consistent IDs for vehicles across frames.
 
-- Masked area support for region-specific counting.
+The system identifies vehicles such as **cars, buses, motorcycles, and trucks**, and updates the count when a vehicle crosses a predefined line on each lane.
 
-- Easy to integrate with video feeds (CCTV, recorded clips).
+---
+
+## 🛠 Features
+
+- Real-time vehicle detection on video input.
+- Separate counting for incoming and outgoing lanes.
+- Highlighted counting lines (red by default, flashes green when crossed).
+- Bounding boxes and vehicle IDs displayed on the video.
+- Simple integration with video files.
+
+  
 ## 🚀 How It Works
 
 1. Load YOLOv8 pre-trained weights for object detection.
